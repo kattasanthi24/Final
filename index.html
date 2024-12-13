@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Santhi's portfolio with projects on descriptive analysis, data quality, and a 10-week learning journey.">
     <title>Santhi's Portfolio</title>
     <style>
         /* General Styles */
@@ -13,12 +14,14 @@
             margin: 0;
             padding: 0;
             text-align: center;
+            line-height: 1.6;
         }
 
         h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin-top: 50px;
             color: #d35400;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         p {
@@ -31,14 +34,14 @@
         .button-container {
             margin-top: 30px;
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
         }
 
         .button-container button {
             padding: 15px 40px;
             font-size: 1rem;
-            margin: 15px;
             background-color: #f5b041;
             color: white;
             border: none;
@@ -46,6 +49,7 @@
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
             cursor: pointer;
             transition: all 0.3s ease;
+            outline: none;
         }
 
         .button-container button:hover {
@@ -56,6 +60,24 @@
         .button-container button:active {
             transform: translateY(2px);
             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer Styles */
+        footer {
+            margin-top: 50px;
+            padding: 20px 0;
+            background-color: #fdf2e9;
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #d35400;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
 
         /* Responsive Design */
@@ -80,10 +102,14 @@
     <h1>Welcome to Santhi's Portfolio</h1>
     <p>Explore my projects by clicking the buttons below.</p>
     <div class="button-container">
-        <button onclick="openDocument('https://kattasanthi24.github.io/Descriptive-Analysis/')">Descriptive Analysis Project</button>
-        <button onclick="openDocument('https://kattasanthi24.github.io/DataQualty-project/')">Quality Data Project</button>
-        <button onclick="openDocument('https://kattasanthi24.github.io/weekly/')">10-weeks of learning</button>
+                <button onclick="openDocument('https://kattasanthi24.github.io/weekly/')" aria-label="Open 10 Weeks of Learning Project">10 Weeks of Learning</button>
+        <button onclick="openDocument('https://kattasanthi24.github.io/Descriptive-Analysis/')" aria-label="Open Descriptive Analysis Project">Descriptive Analysis Project</button>
+        <button onclick="openDocument('https://kattasanthi24.github.io/DataQualty-project/')" aria-label="Open Quality Data Project">Quality Data Project</button>
     </div>
+
+    <footer>
+        <p>&copy; 2024 Santhi's Portfolio | <a href="#">Privacy Policy</a></p>
+    </footer>
 
     <script>
         function openDocument(url) {
